@@ -261,6 +261,7 @@ func (d *ddl) getColumns() []string {
 		fUpper := strings.ToUpper(f)
 		if strings.HasPrefix(fUpper, "PRIMARY KEY") ||
 			strings.HasPrefix(fUpper, "FOREIGN KEY") ||
+			strings.HasPrefix(fUpper, "CONSTRAINT") ||
 			strings.Contains(fUpper, "GENERATED ALWAYS AS") {
 			continue
 		}
